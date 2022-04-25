@@ -1,0 +1,16 @@
+<div class="ideas-conatiner">
+  <mat-card class="idea" *ngFor="let idea of ideas">
+    <mat-card-header>
+      <mat-card-title matBadge={{idea.votes}}>{{idea.name}}</mat-card-title>
+      <mat-card-subtitle>{{idea.description}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-actions align="start">
+      <button mat-button (click)="upvote(idea)"><mat-icon>thumb_up</mat-icon></button>
+      <button mat-button (click)="downvote(idea)"><mat-icon>thumb_down</mat-icon></button>
+      <button mat-button (click)="delete(idea)"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
