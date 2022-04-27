@@ -1,1 +1,23 @@
-<p>registration works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Regisztráció</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="registration-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" [(ngModel)]="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Jelszó</mat-label>
+        <input matInput placeholder="Jelszó" type="password" [(ngModel)]="password">
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="start">
+    <button mat-button (click)="save_registration()" color="primary">Regisztráció</button>
+  </mat-card-actions>
+
+</mat-card>

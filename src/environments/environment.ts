@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: '/api'
-  //baseUrl: 'https://us-central1-webuni-angular-course-2021.cloudfunctions.net/api'
+  //baseUrl: 'https://us-central1-webuni-angular-course-2021.cloudfunctions.net/'
 };
 
 /*

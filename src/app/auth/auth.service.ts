@@ -49,6 +49,16 @@ export class AuthService {
     );
   }
 
+  save_registration(email: string, password: string) {
+    return this.http.post<User>(`${this._baseUrl}/registration`, {email, password}).pipe(
+      tap(user => console.log(user))
+    );
+  }
+
+  registration() {
+    return this.router.navigateByUrl('/registration');
+  }
+
   logout() {
     return this.http.post<User>(`${this._baseUrl}/logout`, null).pipe(
       tap(_ => {

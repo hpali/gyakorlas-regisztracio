@@ -20,4 +20,8 @@ export class LoginComponent implements OnInit {
      // this.authService.login(this.email,this.password).subscribe(user => console.log(user));
     this.authService.login(this.email,this.password).subscribe(user => this.router.navigateByUrl('/ideas'));
   }
+
+  registration() {
+    this.authService.registration();
+  }
 }
